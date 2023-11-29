@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Chat Room</title>
+</head>
+<body>
+	<h1>Welcome to the Chat Room</h1>
+	<div id="chat"></div>
+	<input type="text" id="message">
+	<button onclick="sendMessage()">Send</button>
+	<script>
+		function sendMessage() {
+			var message = document.getElementById('message').value;
+			document.getElementById('chat').innerHTML += '<p>' + message + '</p>';
+			document.getElementById('message').value = '';
+		}
+	</script>
+</body>
+</html>
