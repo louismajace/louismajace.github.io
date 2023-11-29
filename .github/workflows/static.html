@@ -1,53 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat Room</title>
-  <style>
-    #chat-box {
-      height: 300px;
-      border: 1px solid #000;
-      overflow-y: scroll;
-    }
-  </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Chat Room</title>
+	<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="username-input">
-    <input type="text" id="username" placeholder="Enter your username">
-    <button onclick="startChat()">Start Chat</button>
-  </div>
-  <div id="chat-box"></div>
-  <input type="text" id="message" placeholder="Type your message">
-  <button onclick="sendMessage()">Send</button>
-
-  <script>
-    function startChat() {
-      var username = document.getElementById('username').value;
-      document.getElementById('username-input').style.display = 'none';
-      document.getElementById('chat-box').innerText = 'Welcome ' + username + ' to the chat room!';
-    }
-
-    function sendMessage() {
-      var message = document.getElementById('message').value;
-      var chatBox = document.getElementById('chat-box');
-      var username = document.getElementById('username').value;
-      chatBox.innerText += '\n' + username + ': ' + message;
-    }
-  </script>
-</body>
-</html>
-
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Chat Room</title>
-</head>
-<body>
-    <div id="chat-box"></div>
-    <input type="text" id="message" />
-    <button onclick="sendMessage()">Send</button>
-    <script src="script.js"></script>
+	<h1>Welcome to the Chat Room</h1>
+	<input type="text" id="username" placeholder="Enter your username">
+	<button id="joinBtn">Join Chat</button>
+	<div id="chatWindow"></div>
+	<textarea id="messageInput" placeholder="Type your message..."></textarea>
+	<button id="sendBtn">Send</button>
+	<script src="script.js"></script>
 </body>
 </html>
